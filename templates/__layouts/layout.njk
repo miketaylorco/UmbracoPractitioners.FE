@@ -1,0 +1,20 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>{% if id != "home" %}{% if browserTitle|length > 0 %}{{ browserTitle|escape }}{% else %}{{ name|escape }}{% endif %}{% if global.titleSuffix|length > 0 %} - {% endif %}{% endif %}{{ global.titleSuffix|escape }}</title>
+    {% if description != "" %}<meta name="description" content="{{ description|escape }}">{% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="stylesheet" href="{{'tailwind/tailwind.min.css'|style}}">
+
+</head>
+<body>
+
+    {% block content %}{% endblock %}
+
+    <script src="{{ 'common.min.js' | script }}"></script>
+ 
+</body>
+</html>

@@ -1,0 +1,9 @@
+/node_modules
+.brackets.json
+yarn-error.log
+yarn.lock
+.yarn-integrity
+
+.DS_Store
+
+/__local
