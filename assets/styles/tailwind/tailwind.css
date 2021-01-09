@@ -5,12 +5,24 @@
 
 @layer base {
 
+    body {
+        @apply font-main text-grey-3;
+    }
+
     h1 {
         @apply text-3xl;
     }
 
     h2 {
         @apply text-xl;
+    }
+
+    h1, h2 {
+        @apply font-semibold pb-3;
+    }
+
+    p {
+        @apply font-light pb-3;
     }
   
 }
