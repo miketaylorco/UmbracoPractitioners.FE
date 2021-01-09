@@ -85,7 +85,7 @@ var paths = {
     local: '__local',
     dist: '__dist',
     pipeAssetsToCms: [
-        { path: '../Site.Web/', folderMustExist: true }
+        { path: '../UmbracoPractitioners.Web/', folderMustExist: true }
     ],
 
 
