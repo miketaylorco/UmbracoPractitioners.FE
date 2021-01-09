@@ -6,7 +6,8 @@
     <title>{% if id != "home" %}{% if browserTitle|length > 0 %}{{ browserTitle|escape }}{% else %}{{ name|escape }}{% endif %}{% if global.titleSuffix|length > 0 %} - {% endif %}{% endif %}{{ global.titleSuffix|escape }}</title>
     {% if description != "" %}<meta name="description" content="{{ description|escape }}">{% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
+    <link rel="stylesheet" href="https://use.typekit.net/wfq6cpt.css">
     <link rel="stylesheet" href="{{'tailwind/tailwind.min.css'|style}}">
 
 </head>
