@@ -3,7 +3,6 @@
         {
             "id": "home",
             "test": "hello world",
-            "description": "Meta description with \"quotes\"",
             "url": "/index.html"
         }
     ]

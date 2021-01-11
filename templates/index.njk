@@ -1,15 +1,18 @@
 ---
 id: "home"
 test: "hello world"
-description: Meta description with "quotes"
 ---
 
 {% extends "__layouts/layout.njk" %}
 
+{% from '__includes/_macro-example.njk' import example with context %}
+
 {% block content %}
 
-<div class="bg-practitioners-0 w-6/12 mx-auto p-4 rounded-md group hover:bg-practitioners-1 text-black hover:text-white transition">
+<div class="w-6/12 p-4 mx-auto text-black transition rounded-md bg-practitioners-0 group hover:bg-practitioners-1 hover:text-white">
     <h1 class="text-practitioners-2 group-hover:text-white">Hello, World!</h1>
+    <p>{{ test }}</p>
+    <p>{{ example() }}</p>
 </div>
 
 {% endblock %}
