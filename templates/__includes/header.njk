@@ -1,32 +1,32 @@
-<header>
+<header class="fixed top-0 left-0 z-50 w-screen" x-data="{ mobileOpen: false, scrollAtTop: true }">
 
-    {# skip link to content #}
+    <div 
+        class="relative h-20 overflow-hidden transition-all duration-150 ease-out bg-white md:h-auto bg-opacity-95"
+        :class="{ 'h-screen bg-opacity-100': mobileOpen, 'shadow-xl' : !scrollAtTop }"
+        @scroll.window="scrollAtTop = (window.pageYOffset > 0) ? false : true"
+    >
 
-    <div>
-        {# only h1 on home page #}
-        {% if id=="home" %}
-        <h1>
-            {{ global.siteName }}
-        </h1>
-        {% else %}
-        <p>
-            <a href="{{ 'home'|linkid }}">
-            {{ global.siteName }}
-            </a>
-        </p>
-        {% endif %}
+        <p @click="mobileOpen = !mobileOpen" class="md:hidden">Toggle menu</p>
+
+        <div>
+            {# only h1 on home page #}
+            {% if id=="home" %}<h1>{% else %}<p><a href="{{ 'home'|linkid }}">{% endif %}
+            {{ global.siteName }} <span class="md:hidden">{{ section }}</span>
+            {% if id=="home" %}</h1>{% else %}</a></p>{% endif %}
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="xxx">Articles &amp; discussions</a></li>
+                <li><a href="xxx">Learning</a></li>
+                <li><a href="xxx">Meetups &amp; events</a></li>
+                <li><a href="xxx">Showcase</a></li>
+                <li><a href="xxx">Profiles</a></li>
+                <li><a href="xxx">Resources</a></li>
+                <li><a href="xxx">Blogs</a></li>
+            </ul>
+        </nav>
+
     </div>
-    
-    <nav>
-        <ul>
-            <li><a href="xxx">Articles &amp; discussions</a></li>
-            <li><a href="xxx">Learning</a></li>
-            <li><a href="xxx">Meetups &amp; events</a></li>
-            <li><a href="xxx">Showcase</a></li>
-            <li><a href="xxx">Profiles</a></li>
-            <li><a href="xxx">Resources</a></li>
-            <li><a href="xxx">Blogs</a></li>
-        </ul>
-    </nav>
 
 </header>

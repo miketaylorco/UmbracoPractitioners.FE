@@ -2,6 +2,7 @@
     "nav": [
         {
             "id": "home",
+            "section": "Section name",
             "test": "Hello, world!",
             "url": "/index.html"
         }

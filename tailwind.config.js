@@ -67,7 +67,11 @@ module.exports = {
     fontFamily: {
       main: ['skolar-sans-latin', 'sans-serif']
     },
-    extend: {}
+    extend: {
+      transitionProperty: {
+        'height': 'height'
+      }
+    }
   },
   variants: {
     extend: {},

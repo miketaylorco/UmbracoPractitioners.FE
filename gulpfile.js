@@ -903,7 +903,7 @@ gulp.task('watch', function() {
 
     // nunjucks
     gulp.watch([paths.templates + '/**/*.njk', '!' + paths.templates + '/{' + paths.ignore.toString() + '}/*'], gulp.series('nunjucks:single', 'checkYAML', 'css', argv.dist ? gulp.parallel('reload:local', 'reload:dist') : 'reload:local')).on('error', function() {});
-    gulp.watch(paths.templates + '/{' + paths.watchGlobalNunjucks.toString() + '}/*.njk', gulp.series('nunjucks', argv.dist ? gulp.parallel('reload:local', 'reload:dist') : 'reload:local')).on('error', function() {});
+    gulp.watch(paths.templates + '/{' + paths.watchGlobalNunjucks.toString() + '}/*.njk', gulp.series('nunjucks', 'css', argv.dist ? gulp.parallel('reload:local', 'reload:dist') : 'reload:local')).on('error', function() {});
 
     // styles
     gulp.watch([paths.styles + '/**/*.css', '!' + paths.styles + '/**/*.min.css'], gulp.series('css', argv.dist ? gulp.parallel('reload:local', 'reload:dist') : 'reload:local')).on('error', function() {});

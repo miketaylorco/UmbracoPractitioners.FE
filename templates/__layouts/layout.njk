@@ -15,10 +15,11 @@
 </head>
 <body>
 
-    {% include "__includes/header.njk" %}
+    <div class="pt-32 md:pt-64">
+        {% include "__includes/header.njk" %}
 
-    {% block content %}{% endblock %}
-
+        {% block content %}{% endblock %}
+    </div>
     <script src="{{ 'common.min.js' | script }}"></script>
  
 </body>
