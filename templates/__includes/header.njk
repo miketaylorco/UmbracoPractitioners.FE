@@ -1,0 +1,32 @@
+<header>
+
+    {# skip link to content #}
+
+    <div>
+        {# only h1 on home page #}
+        {% if id=="home" %}
+        <h1>
+            {{ global.siteName }}
+        </h1>
+        {% else %}
+        <p>
+            <a href="{{ 'home'|linkid }}">
+            {{ global.siteName }}
+            </a>
+        </p>
+        {% endif %}
+    </div>
+    
+    <nav>
+        <ul>
+            <li><a href="xxx">Articles &amp; discussions</a></li>
+            <li><a href="xxx">Learning</a></li>
+            <li><a href="xxx">Meetups &amp; events</a></li>
+            <li><a href="xxx">Showcase</a></li>
+            <li><a href="xxx">Profiles</a></li>
+            <li><a href="xxx">Resources</a></li>
+            <li><a href="xxx">Blogs</a></li>
+        </ul>
+    </nav>
+
+</header>

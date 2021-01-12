@@ -10,19 +10,15 @@
     }
 
     h1 {
-        @apply text-3xl;
+        @apply pb-3 text-3xl font-semibold;
     }
 
     h2 {
-        @apply text-xl;
-    }
-
-    h1, h2 {
-        @apply font-semibold pb-3;
+        @apply pb-3 text-xl font-semibold;
     }
 
     p {
-        @apply font-light pb-3;
+        @apply pb-3 font-light;
     }
   
 }

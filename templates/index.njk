@@ -1,18 +1,12 @@
 ---
 id: "home"
-test: "hello world"
+test: "Hello, world!"
 ---
 
 {% extends "__layouts/layout.njk" %}
 
-{% from '__includes/_macro-example.njk' import example with context %}
-
 {% block content %}
 
-<div class="w-6/12 p-4 mx-auto text-black transition rounded-md bg-practitioners-0 group hover:bg-practitioners-1 hover:text-white">
-    <h1 class="text-practitioners-2 group-hover:text-white">Hello, World!</h1>
-    <p>{{ test }}</p>
-    <p>{{ example() }}</p>
-</div>
+    <h1>{{ test }}</h1>
 
 {% endblock %}

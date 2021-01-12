@@ -2,7 +2,7 @@
     "nav": [
         {
             "id": "home",
-            "test": "hello world",
+            "test": "Hello, world!",
             "url": "/index.html"
         }
     ]
